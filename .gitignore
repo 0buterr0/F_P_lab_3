@@ -1,0 +1,9 @@
+dist-newstyle/
+dist/
+.stack-work/
+*.hi
+*.o
+cabal.project.local*
+.ghc.environment.*
+.vscode/
+result.txt

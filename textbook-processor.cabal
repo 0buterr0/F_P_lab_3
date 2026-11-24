@@ -1,0 +1,22 @@
+cabal-version:      2.4
+name:               textbook-processor
+version:            0.1.0.0
+synopsis:           Textbook text processing with Symbol/Word/Sentence types (functional programming, lab 3)
+author:             Lamash Maksym, IPS-42
+build-type:         Simple
+extra-doc-files:    README.md
+
+executable textproc
+  main-is:          Main.hs
+  hs-source-dirs:   app, src
+  other-modules:    Types
+                    Parser
+                    Analysis
+  build-depends:    base >=4.14 && <5
+                  , bytestring
+                  , containers
+                  , text
+  if os(windows)
+    build-depends:  Win32
+  default-language: Haskell2010
+  ghc-options:      -O2 -Wall
